@@ -23,6 +23,9 @@ public protocol NetworkServiceProtocol {
 
 @available(iOS 13.0.0, *)
 public class NetworkService: NetworkServiceProtocol {
+    
+    public init() {}
+    
     public func request<T: Decodable>(endpoint: URL) async throws -> T {
         do {
             let (data, response) = try await URLSession.shared.data(from: endpoint)
