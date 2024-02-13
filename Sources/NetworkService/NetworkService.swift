@@ -17,13 +17,13 @@ public enum NetworkError: Error {
 
 
 @available(iOS 13.0.0, *)
-protocol NetworkServiceProtocol {
+public protocol NetworkServiceProtocol {
     func request<T: Decodable>(endpoint: URL) async throws -> T
 }
 
 @available(iOS 13.0.0, *)
 public class NetworkService: NetworkServiceProtocol {
-    func request<T: Decodable>(endpoint: URL) async throws -> T {
+    public func request<T: Decodable>(endpoint: URL) async throws -> T {
         do {
             let (data, response) = try await URLSession.shared.data(from: endpoint)
             guard let httpResponse = response as? HTTPURLResponse else {
