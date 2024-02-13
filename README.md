@@ -19,7 +19,7 @@ To add NetworkServicePackage to your Swift project, edit your Package.swift file
 To add NetworkServicePackage to your Swift project, edit your Package.swift file and add the following dependency:
 
 dependencies: [
-    .package(url: "https://github.com/scorpionsPD/NetworkServicePackage.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/scorpionsPD/NetworkService.git", .upToNextMajor(from: "1.0.0"))
 ]
 
 Then, add NetworkServicePackage to your target dependencies:
